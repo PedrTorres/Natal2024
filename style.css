@@ -1,0 +1,20 @@
+body {
+    background-image: url('./data/backgroundimage.jpg');
+    background-size: cover; /* para cobrir todo o corpo */
+    background-position: center; /* para centralizar a imagem de fundo */
+    background-repeat: no-repeat; /* para evitar repetição da imagem */
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    max-height: 400px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    video {
+        max-width: 280px;
+        max-height: 200px;
+    }
+}

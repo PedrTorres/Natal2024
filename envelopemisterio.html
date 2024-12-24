@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal2024 - Envelope Mistério</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container col-xxl-8 px-4 pt-5">
+        <div class="bg-light row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-8 fw-bold lh-1 text-body-emphasis">Envelope Mistério</h1>
+                <p class="lead">
+                    Dentro do envelope mistério deixei-te a password para a próxima fase.<br>
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    <input type="text" id="respostaUsuario" name="respostaUsuario" placeholder="Escreve a Resposta">
+                    <button onclick="validarResposta()" type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Validar Resposta</button>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <video class="rounded-lg-3 img-fluid max-width mb-2" autoplay loop muted width="280">
+                    <source src="./data/envelopemisterio.mp4" type="video/mp4">
+                </video>
+                <audio id="audio" autoplay loop>
+                    <source src="./data/misterio.mp4" type="audio/mp4">
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+  function validarResposta() {
+    var respostaInserida = document.getElementById('respostaUsuario').value;
+    respostaInserida = respostaInserida.toLowerCase().replace(/\s+/g, '');
+    var respostaCorreta = "believe";
+
+
+      // Verifica se a resposta está correta
+      if (respostaInserida === respostaCorreta) {
+        alert('Resposta certa! Nova viagem a caminho....');
+        window.location.href = 'acredita.html';
+      } else {
+        alert('Resposta errada Ritinha, tu és capaz de mais. Tenta novamente.');
+      }
+    }
+</script>
+</html>
