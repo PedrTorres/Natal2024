@@ -1,5 +1,5 @@
 body {
-    background-image: url('./data/backgroundimage.jpg');
+    background-image: url('./assets/backgroundimage.jpg');
     background-size: cover; /* para cobrir todo o corpo */
     background-position: center; /* para centralizar a imagem de fundo */
     background-repeat: no-repeat; /* para evitar repetição da imagem */
